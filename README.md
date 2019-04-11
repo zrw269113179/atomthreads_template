@@ -1,2 +1,3 @@
 # atomthreads_template
-atomthreads操作系统在stm8l上的实现
+atomthreads操作系统在stm8l上的实现，该库为模板文件，实现了uart串口驱动和gpio驱动。
+用户可以在HeaderIncluder.h上配置串口是否使用dma。
