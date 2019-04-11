@@ -1,0 +1,15 @@
+"-p" 
+
+"D:\Program Files\iar\stm8\config\ddf\iostm8l052r8.ddf" 
+
+"-d" 
+
+"stlink" 
+
+"--mcuname" 
+
+"STM8L052R8" 
+
+
+
+
