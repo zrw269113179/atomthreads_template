@@ -145,7 +145,7 @@ NO_REG_SAVE void main ( void )
     /* CLK configuration */
     CLK_Config();
         /* Initialise UART (115200bps) */
-    Uart_Init(3,9600);
+    Uart_Init(DEBUG_UART,9600);
     DMA_GlobalCmd(ENABLE); 
 
     /**
@@ -242,47 +242,6 @@ static void at_thread_func (uint32_t param)
  */
 static void main_thread_func (uint32_t param)
 {
-    uint32_t test_status;
-
-    /* Compiler warnings */
-    param = param;
-
-
-
-    /* Put a message out on the UART */
-    printf("go\n");
-
-    /* Start test. All tests use the same start API. */
-    test_status = 0;
-
-    /* Check main thread stack usage (if enabled) */
-#ifdef ATOM_STACK_CHECKING
-    if (test_status == 0)
-    {
-        uint32_t used_bytes, free_bytes;
-
-        /* Check idle thread stack usage */
-        if (atomThreadStackCheck (&main_tcb, &used_bytes, &free_bytes) == ATOM_OK)
-        {
-            /* Check the thread did not use up to the end of stack */
-            if (free_bytes == 0)
-            {
-                printf ("Main stack overflow\n");
-                test_status++;
-            }
-
-            /* Log the stack usage */
-#ifdef TESTS_LOG_STACK_USAGE
-            printf ("MainUse:%d\n", (int)used_bytes);
-#endif
-        }
-
-    }
-#endif
-
-    
-
-
     /* Test finished, flash slowly for pass, fast for fail */
     while (1)
     {

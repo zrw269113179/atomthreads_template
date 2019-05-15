@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"D:\Program Files\iar\common\bin\cspybat" -f "D:\atomthreads-master\atomthreads_template\EWSTM8\settings\atomthreads-stm8l-iar.Debug.general.xcl" --backend -f "D:\atomthreads-master\atomthreads_template\EWSTM8\settings\atomthreads-stm8l-iar.Debug.driver.xcl" 
+"D:\Program Files\iar\common\bin\cspybat" -f "D:\温州美旅\车位锁\测架\atomthreads_template\EWSTM8\settings\atomthreads-stm8l-iar.Debug.general.xcl" --backend -f "D:\温州美旅\车位锁\测架\atomthreads_template\EWSTM8\settings\atomthreads-stm8l-iar.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"D:\Program Files\iar\common\bin\cspybat" -f "D:\atomthreads-master\atomthreads_template\EWSTM8\settings\atomthreads-stm8l-iar.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\atomthreads-master\atomthreads_template\EWSTM8\settings\atomthreads-stm8l-iar.Debug.driver.xcl" 
+"D:\Program Files\iar\common\bin\cspybat" -f "D:\温州美旅\车位锁\测架\atomthreads_template\EWSTM8\settings\atomthreads-stm8l-iar.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\温州美旅\车位锁\测架\atomthreads_template\EWSTM8\settings\atomthreads-stm8l-iar.Debug.driver.xcl" 
 
 @echo off 
 :end
